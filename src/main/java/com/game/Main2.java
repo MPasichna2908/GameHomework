@@ -118,10 +118,10 @@ public class Main2 {
         if (a == arr.length - 1) {
             a = (int) (Math.random() * (2)) + (a - 1);
         }
-        if (a > 0 && a < arr.length - 1) {
+        if (a > 0 & a < arr.length - 1) {
             a = (int) (Math.random() * (3)) + (a - 1);
         }
-        if (b < arr.length - 1 && b > 0) {
+        if (b < arr.length - 1 & b > 0) {
             b = (int) (Math.random() * (3)) + (b - 1);
         }
         arr[b][a] = 'M';
