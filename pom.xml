@@ -34,7 +34,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.game.Main2</mainClass>
+                            <mainClass>com.game.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
