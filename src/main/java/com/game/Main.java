@@ -38,7 +38,10 @@ public class Main {
             if (action.equals("Left")) {
                 hero.left();
             }
-            battleField.printArray( reader);
+            String view = battleField.printArray();
+            reader.print(view);
+            reader.flush();
+
             monster.printMonster();
         }
     }

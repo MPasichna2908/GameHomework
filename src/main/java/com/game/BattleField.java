@@ -1,7 +1,5 @@
 package com.game;
 
-import jline.console.ConsoleReader;
-
 import java.io.IOException;
 
 public class BattleField {
@@ -16,7 +14,7 @@ public class BattleField {
         }
     }
 
-    public void printArray( ConsoleReader reader) throws IOException {
+    public String printArray() throws IOException {
         String str = "";
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
@@ -29,8 +27,7 @@ public class BattleField {
             } else
                 str += "|\n|";
         }
-        reader.print(str);
-        reader.flush();
+        return str;
     }
 
 }
