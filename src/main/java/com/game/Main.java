@@ -10,8 +10,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
         ConsoleReader reader = new ConsoleReader();
 
-        BattleField BF=new BattleField();
-        Hero hero=new Hero(BF);
+        BattleField battleField=new BattleField();
+        Hero hero=new Hero(battleField);
+        Monster monster=new Monster(battleField);
 
         while (true) {
             KeyMap map = new KeyMap("");
@@ -37,8 +38,8 @@ public class Main {
             if (action.equals("Left")) {
                 hero.left();
             }
-            BF.printArray( reader);
-            BF.printMonster();
+            battleField.printArray( reader);
+            monster.printMonster();
         }
     }
 
