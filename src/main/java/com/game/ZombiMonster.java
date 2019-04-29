@@ -1,8 +1,8 @@
 package com.game;
 
-public class Monster {
+public class ZombiMonster {
     private BattleField battleField;
-    Monster (BattleField battleField){
+    ZombiMonster (BattleField battleField){
         this.battleField=battleField;
     }
     private int x, y;
@@ -26,7 +26,8 @@ public class Monster {
         if (y < battleField.array.length - 1 && y > 0) {
             y = (int) (Math.random() * (3)) + (y - 1);
         }
-        battleField.array[y][x] = 'M';
+        battleField.array[y][x] = 'Z';
         return battleField.array;
     }
+
 }

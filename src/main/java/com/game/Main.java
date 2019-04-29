@@ -13,6 +13,7 @@ public class Main {
         BattleField battleField=new BattleField();
         Hero hero=new Hero(battleField);
         Monster monster=new Monster(battleField);
+        ZombiMonster zombiMonster=new ZombiMonster(battleField);
 
         while (true) {
             KeyMap map = new KeyMap("");
@@ -43,6 +44,7 @@ public class Main {
             reader.flush();
 
             monster.printMonster();
+            zombiMonster.printMonster();
         }
     }
 
