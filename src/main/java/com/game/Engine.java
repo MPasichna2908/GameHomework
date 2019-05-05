@@ -7,18 +7,20 @@ import java.io.IOException;
 
 public class Engine {
 
-    ConsoleReader reader = new ConsoleReader();
+    private ConsoleReader reader;
     private BattleField battleField;
     private Monster monster;
     private ZombiMonster zombiMonster;
     private Hero hero;
 
-   public Engine (BattleField battleField, Monster monster, Hero hero, ZombiMonster zombiMonster) throws IOException {
-        this.battleField=battleField;
-        this.monster=monster;
-        this.hero=hero;
-        this.zombiMonster=zombiMonster;
+    public Engine(BattleField battleField, Monster monster, Hero hero, ZombiMonster zombiMonster, ConsoleReader consoleReader) throws IOException {
+        this.battleField = battleField;
+        this.monster = monster;
+        this.hero = hero;
+        this.zombiMonster = zombiMonster;
+        this.reader = consoleReader;
     }
+
     public void runGame() throws IOException {
         while (true) {
 
@@ -33,25 +35,25 @@ public class Engine {
             reader.flush();
 
 
-        if (action.equals("Up")) {
-            hero.up();
-        }
-        if (action.equals("Down")) {
-            hero.down();
-        }
-        if (action.equals("Right")) {
-            hero.right();
-        }
-        if (action.equals("Left")) {
-            hero.left();
-        }
-        String view = battleField.printArray();
-        reader.print(view);
-        reader.flush();
+            if (action.equals("Up")) {
+                hero.moveUp();
+            }
+            if (action.equals("Down")) {
+                hero.moveDown();
+            }
+            if (action.equals("Right")) {
+                hero.moveRight();
+            }
+            if (action.equals("Left")) {
+                hero.moveLeft();
+            }
+            String view = battleField.printArray();
+            reader.print(view);
+            reader.flush();
 
-        monster.printMonster();
-        zombiMonster.printMonster();
+            monster.printMonster();
+            zombiMonster.printMonster();
 
         }
-   }
+    }
 }

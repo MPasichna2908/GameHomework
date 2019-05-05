@@ -1,10 +1,12 @@
 package com.game;
 
-public class ZombiMonster extends MonsterMain{
+public class ZombiMonster extends AbstractMonster {
     private BattleField battleField;
-    ZombiMonster (BattleField battleField){
-    super (battleField);
+
+    ZombiMonster(BattleField battleField) {
+        super(battleField);
     }
+
     void printMonster() {
         super.printMonster('Z');
     }

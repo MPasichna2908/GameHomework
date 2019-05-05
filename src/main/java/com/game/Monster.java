@@ -1,13 +1,14 @@
 package com.game;
 
-    public class Monster extends MonsterMain{
-        private BattleField battleField;
-        Monster(BattleField battleField) {
-            super(battleField);
-        }
+public class Monster extends AbstractMonster {
+    private BattleField battleField;
 
-        void printMonster() {
-            printMonster('M');
-        }
-
+    Monster(BattleField battleField) {
+        super(battleField);
     }
+
+    void printMonster() {
+        printMonster('M');
+    }
+
+}
