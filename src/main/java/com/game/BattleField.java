@@ -4,9 +4,10 @@ import java.io.IOException;
 
 public class BattleField {
 
-    public char[][] array = new char[10][10];
+    public char[][] array;
 
-    BattleField() {
+    BattleField(int height, int width) {
+        array = new char[height][width];
         for (int i = 0; i < getHeight(); i++) {
             for (int j = 0; j < getWidth(); j++) {
                 array[i][j] = ' ';
@@ -44,7 +45,8 @@ public class BattleField {
     private int getHeight() {
         return array.length;
     }
-    private int getWidth(){
+
+    private int getWidth() {
         return array[0].length;
     }
 }
