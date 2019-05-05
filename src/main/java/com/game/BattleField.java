@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class BattleField {
 
-    public char[][] array;
+    private char[][] array;
 
     BattleField(int height, int width) {
         array = new char[height][width];

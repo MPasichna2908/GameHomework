@@ -10,8 +10,8 @@ public class Main {
 
         BattleField battleField = new BattleField(10, 10);
         Hero hero = new Hero(battleField, new Position(8, 5));
-        Monster monster = new Monster(battleField);
-        ZombiMonster zombiMonster = new ZombiMonster(battleField);
+        Monster monster = new Monster(battleField, new Position(2,1));
+        ZombiMonster zombiMonster = new ZombiMonster(battleField, new Position(9,7));
 
         Engine engine = new Engine(battleField, monster, hero, zombiMonster, new ConsoleReader());
         engine.runGame();
