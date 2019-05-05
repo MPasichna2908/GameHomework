@@ -21,12 +21,12 @@ public class Hero {
     }
 
     public void moveUp() {
-        Position newPosition = new Position(position.getX() + 1, position.getY());
+        Position newPosition = new Position(position.getX() - 1, position.getY());
         position = battleField.moveToPosition(newPosition, position, 'H');
     }
 
     public void moveDown() {
-        Position newPosition = new Position(position.getX() - 1, position.getY());
+        Position newPosition = new Position(position.getX() + 1, position.getY());
         position = battleField.moveToPosition(newPosition, position, 'H');
 
     }
